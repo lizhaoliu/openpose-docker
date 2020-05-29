@@ -21,7 +21,7 @@ WORKDIR /openpose
 RUN git clone https://github.com/CMU-Perceptual-Computing-Lab/openpose.git .
 
 # download COCO caffe model to models dir
-RUN wget -O /openpose/models/pose/coco/pose_iter_440000.caffemodel http://posefs1.perception.cs.cmu.edu/OpenPose/models/pose/coco/pose_iter_440000.caffemodel
+ADD http://posefs1.perception.cs.cmu.edu/OpenPose/models/pose/coco/pose_iter_440000.caffemodel /openpose/models/pose/coco/pose_iter_440000.caffemodel
 
 # build 
 WORKDIR /openpose/build
